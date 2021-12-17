@@ -26,27 +26,26 @@ function verifyString(paliString)
     let noPali = [];
     let paliArr = [];
     let stringLength = paliString.length - 1;
-    let nodefString;
-    let defString;
+    let rightString;
+    let invertString;
 
     for(let count = 0; count <= stringLength; count++) {
         
         let saveNoPali = paliString[count];
         noPali.push(saveNoPali);
-        nodefString = noPali.toString();
+        rightString = noPali.toString();
 
     }
-    console.log(noPali);
-
+    
     for(let count = stringLength; count >= 0; count--) {
         let savePali = paliString[count];
         paliArr.push(savePali);
-        defString = paliArr.toString();
+        invertString = paliArr.toString();
 
     }
-    console.log(paliArr);
+    
 
-    if(nodefString === defString) 
+    if(rightString === invertString) 
     {
         document.write('Questa parola è palidroma');
     }
