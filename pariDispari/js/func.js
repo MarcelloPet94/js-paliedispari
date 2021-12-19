@@ -8,32 +8,56 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-let equalOdd = prompt("Pari o dispari?");
-let equalOddConverted = equalOdd.toLocaleLowerCase();
-
-let userN = parseInt(prompt("Inserisci un numero"));
-console.log("Numero utente: " + userN);
 
 
-function sumNumb(userN , equalOddConverted)
+
+
+
+
+function sumNumb(userN)
 { 
-    let compN = Math.floor(Math.random() * 5 + 1);
-    console.log("Numero random: " + compN);
-    let resultOfN = userN + compN;
-    document.write(resultOfN);
 
-    if(resultOfN % 2 == 0 && equalOdd === 'pari')
+    let compN = Math.floor(Math.random() * 5 + 1);
+    console.log("Numero utente: " + userN);
+    console.log("Numero computer: " + compN);
+    let resultOfN = userN + compN;
+
+    if(resultOfN % 2 == 0)
     {
-        document.write("<br>" + "Numero pari" + "Hai vinto");
+        let pari = 'pari' 
+        return pari;
+        
     }
     else
     {
-        document.write("<br>" + "Dispari" , "Hai perso");
+        let dispari = 'dispari' 
+        return dispari;
+        
     }
 
+}
+
+let userN = parseInt(prompt("inserisci numero"));
+let evOd = prompt("Pari o dispari");
+console.log('Hai scelto: ' + evOd);
+
+
+if(sumNumb(userN) == evOd)
+{
+    document.write("win");
+}
+else
+{
+    document.write("lose");
 }
 
 
 
 
-document.write(sumNumb(userN));
+
+
+
+
+
+
+
