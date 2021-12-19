@@ -37,13 +37,3 @@ function sumNumb(userN , equalOddConverted)
 
 
 document.write(sumNumb(userN));
-
-/*
-function verifyEqualOdd(resultOfN)
-{
-    if(resultOfN % 2 = 0)
-    {
-        
-    } 
-}
-*/
